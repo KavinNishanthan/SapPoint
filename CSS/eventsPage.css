@@ -1,0 +1,417 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    font-size: 17px;
+}
+
+.navbar-dark {
+    background-color: rgb(0, 183, 255);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-nav>li>a {
+    color: white;
+}
+
+.nav.navItems>li>a:hover,
+.nav.navbar-right>li>a:hover {
+    background-color: transparent;
+    color: black;
+}
+
+nav.circle ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+nav.circle ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+nav.circle ul li a:hover:after {
+    -webkit-animation: circle 1.5s ease-in forwards;
+}
+
+@-webkit-keyframes circle {
+    0% {
+        width: 1px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        z-index: -1;
+        background: white;
+        border-radius: 100%;
+    }
+    100% {
+        background: white;
+        height: 5000%;
+        width: 5000%;
+        z-index: -1;
+        top: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 0;
+    }
+}
+
+.logo-container {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.logo-container>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-container {
+    position: relative;
+    padding-top: 7px;
+    margin-top:-10px;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    float: right;
+    cursor:pointer;
+}
+
+.dropbtn {
+    background-color: rgb(0, 183, 255);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: rgb(0, 183, 255);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 260px;
+    margin-left:-78px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size:15px;
+    color: grey;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    color:black;
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+.show {
+    display: block;
+}
+
+.profile {
+    padding-top:10px;
+    padding-bottom:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border-bottom:1px solid lightgray;
+    margin-bottom:10px;
+}
+
+#profile-name {
+    font-size:13px;
+    background-color:white;
+    color:black;
+}
+
+#profile-name:hover {
+    background-color:white;
+    color:black;
+}
+
+.image-container {
+    height:150px;
+    width:150px;
+    border-radius:50%;
+}
+
+.image-container>img {
+    height:100%;
+    width:100%;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: transparent
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+.event-page1 {
+    margin-top: 4%;
+    height: 91vh;
+}
+
+.event-image-container {
+    width: 100%;
+    height: 70%;
+}
+
+.event-image-container>img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+#myDropdown{
+	margin-top:1rem;
+	margin-left:-15rem;
+}
+
+.image-bar {
+    height:5px;
+    background-color:rgb(0,183,255);
+    margin-bottom:50px;
+}
+
+.event-detail-container {
+    display: flex;
+    align-items: center;
+    gap: 24%;
+}
+
+.registeration-detail-container {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    margin: 10px 40px;
+    height: 70px;
+    width: 50%;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: rgb(237, 246, 254);
+}
+
+.deadline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header {
+    color: rgb(0, 183, 255);
+}
+
+.detail {
+    color: green;
+}
+
+.calender-container {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(237, 246, 254);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 183, 255);
+    font-size: 25px;
+}
+
+.watchlist-container {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 183, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 183, 255);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.registeration-button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.register-button {
+    height: 40px;
+    width: 100px;
+    padding: 10px 18px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(0, 183, 255);
+    text-decoration: none;
+}
+
+.register-button:hover,
+.register-button:focus {
+    color: white;
+    background-color: rgb(0, 183, 255);
+    text-decoration: none;
+}
+
+.detail-container {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    margin-left: 3%;
+    gap: 5%;
+}
+
+.events-container {
+    height:150px;
+    width:50%;
+    display:flex;
+    gap:5%;
+}
+
+.event-container {
+    margin-top: -20px;
+}
+
+.events-image-container {
+    height: 100%;
+    width: 40%;
+    border-radius: 8px;
+}
+
+.events-image-container>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.event-name,
+.organiser-name,
+.institute-name {
+    color: rgb(36, 80, 160);
+}
+
+.time-status {
+    display:flex;
+    align-items:center;
+    gap:10%;
+    padding:1%;
+    margin-top:10%;
+}
+
+.time {
+    width:130px;
+    display:flex;
+    align-items:center;
+    gap:5%;
+    color:rgb(0,183,255);
+}
+
+.expire {
+    color:red;
+}
+
+.event-type {
+    display: flex;
+    height: 25px;
+    width: 200px;
+    justify-content: center;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    padding: 2px 8px;
+    background-color: lightgray;
+}
+
+.description-container {
+    height: 200px;
+    width: 500px;
+    border: 1px solid rgb(0, 183, 255);
+    border-radius: 8px;
+    overflow: scroll;
+    word-break: break-word;
+    padding: 15px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 10%;
+    margin: 30px 10px 30px 40px;
+    height: 70px;
+    width: 94%;
+    border-radius: 8px;
+    background-color: rgb(237, 246, 254);
+}

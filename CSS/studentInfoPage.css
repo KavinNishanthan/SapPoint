@@ -1,0 +1,1034 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    font-size: 17px;
+}
+
+.navbar-dark {
+    background-color: rgb(0, 183, 255);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar-nav>li>a {
+    color: white;
+}
+
+button.navbar-toggle.tg {
+    float: left;
+    margin-top: 2%;
+}
+
+.nav.navItems>li>a:hover {
+    background-color: transparent;
+    color: black;
+}
+
+nav.circle ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+nav.circle ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+nav.circle ul li a:hover:after {
+    -webkit-animation: circle 1.5s ease-in forwards;
+}
+
+.logo-container {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.logo-container>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.profile-container {
+    position: relative;
+    margin-top:-48px;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    float: right;
+    cursor:pointer;
+}
+
+.dropbtn {
+    background-color: rgb(0, 183, 255);
+    color: white;
+    padding: 2px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: rgb(0, 183, 255);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 260px;
+    margin-left:-78px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size:15px;
+    color: grey;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: block;
+}
+
+#myDropdown{
+	margin-top:1rem;
+	margin-left:-15rem;
+}
+
+
+.dropdown a:hover {
+    color:black;
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+.show {
+    display: block;
+}
+
+.profile {
+    padding-top:10px;
+    padding-bottom:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border-bottom:1px solid lightgray;
+    margin-bottom:10px;
+}
+
+#profile-name {
+    font-size:13px;
+    background-color:white;
+    color:black;
+}
+
+#profile-name:hover {
+    background-color:white;
+    color:black;
+}
+
+.image-container {
+    height:150px;
+    width:150px;
+    border-radius:50%;
+}
+
+.image-container>img {
+    height:100%;
+    width:100%;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.form-group>.input-fields>select{
+  border:1px solid black;
+  padding:5px 0px;
+  width:50%;
+}
+
+.form-group>label{
+    font-size:15px;
+    font-weight:600;
+    margin:1.8% 0% 0% 1%;
+}
+select:focus > option:checked { 
+    background:lightgreen!important;
+}
+.btn.change-button{
+  width:12%;
+  color:white;
+  background-color:rgb(0, 183, 255);
+}
+.btn.change-button:hover{
+  color:white;
+}
+.form-horizontal>.form-group.myGroup{
+    margin-left:65%;
+}
+.students-list-container {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width:100%;
+}
+.form-control.search-box{
+    outline:none;
+    box-shadow:none;
+   
+}
+.form-control.search-box:focus{
+    outline:none;
+    box-shadow:none;
+    border:1px solid gray;
+    
+}
+
+.black-overlay1 {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 101;
+    -moz-opacity: 0.2;
+    opacity: .20;
+    filter: alpha(opacity=20);
+    background-attachment: fixed;
+}
+
+.myModal1>.row {
+    position: fixed;
+    width: 74.8%;
+}
+
+.myModal1>.row {
+    background-color: rgb(0, 183, 255);
+    color: white;
+    margin: 0%;
+    margin-bottom: 10px;
+}
+
+.icon>ul>li {
+    list-style: none;
+    float: right;
+    margin-top: -10%;
+    margin-left:20%;
+}
+
+.icon>ul>li>i {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.myModal1 {
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    right: 5%;
+    background-color: white;
+    z-index: 102;
+    overflow-x: hidden;
+    height: 80%;
+    width: 80%;
+    box-shadow: 0 0 10px black;
+    border: none;
+    border-radius: 5px;
+}
+
+.table-container {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: transparent
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+.student-container {
+    height:100%;
+    margin-top:7.5%;
+    border-right:2px solid black;
+}
+.navbar-toggle.button{
+    float:right;
+}
+.navbar-toggle.button>.icon-bar{
+    background-color:black;
+}
+.no-student {
+    font-size: 20px;
+    color: lightgrey;
+    padding-top: 70%;
+    padding-left: 20%;
+    font-weight: lighter;
+}
+
+.students-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    height: 50px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    margin: 10px auto;
+    box-shadow: 1px 1px 2px rgb(195, 195, 195);
+}
+
+.student-profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: grey;
+    font-size: 20px;
+}
+
+.student-profile-name {
+    font-size: 20px;
+   
+}
+.student-profile-name:hover{
+    text-decoration:underline;
+}
+.profile-staff-container{
+    width:75%;
+    height:100%;
+}
+.profile-header {
+    gap:20px;
+    display:flex;
+    margin-left: 10%;  
+    width: 100%;
+    
+}
+hr.horizontal-line{
+    width:133%
+}
+hr.horizontal{
+    width:133%
+}
+.navbar-brand.student-info{
+    padding:0%; 
+    margin:0px 0px 0px -20px;
+    color:black;
+    text-decoration:underline;
+}
+.navbar-brand.student-info:hover{
+    text-decoration:underline;
+}
+   
+.profile-image-container {
+    margin-top: 6%;
+    width: 20%;
+    height: 60%;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.profile-image-container>img {
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+    object-fit: cover;
+}
+a.students-list:hover{
+    text-decoration:none;
+}
+
+.user-id {
+    font-size: 19px;
+}
+
+.profile-detail-container {
+    width: 80%;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding-top: 8%;
+}
+
+.username {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.department {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+    color: brown;
+    gap: 5px;
+}
+
+.semester-container {
+    width:100%;
+    margin-left: 2%;
+    margin-top:5%;
+    margin-bottom:1%;
+    
+}
+
+.semester-container > select {
+    width:100px;
+}
+
+
+#change {
+    margin-left: 1%;
+    width: 100px;
+    color: white;
+    background-color: rgb(0, 183, 255);
+}
+
+#get {
+    margin-left: 60%;
+    width: 130px;
+    color: white;
+    background-color: rgb(0, 183, 255);
+}
+
+.fa-solid.fa-user{
+      font-size:20px;
+      
+}
+.fa-solid.fa-user>span{
+      font-size:15px;
+      margin-left:5px;
+}
+
+.sap-table-container {
+    display:flex;
+    width: 100%;
+    gap:10px;
+}
+
+.fa-magnifying-glass{
+    float:right;
+    margin:-28px 3px 0px 0px;
+    font-size:18px;
+    color:gray;
+}
+@-webkit-keyframes circle {
+    0% {
+        width: 1px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        z-index: -1;
+        background: white;
+        border-radius: 100%;
+    }
+    100% {
+        background: rgb(224, 216, 216);
+        height: 5000%;
+        width: 5000%;
+        z-index: -1;
+        top: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 0;
+    }
+}
+
+@media(min-width:768px) and (max-width:2000px){
+    .btn.change-button{
+        width:30%;
+    }
+    .profile-page {
+    overflow-x:hidden;
+    height:100vh;
+    display:flex;
+    }
+   .student-container {
+    height:100%;
+    width: 25%;
+    
+    }
+    .navbar-brand.student-info{
+    padding:0%; 
+    color:transparent;
+    font-size:1px;
+    }
+  
+}
+
+@media(min-width:1000px) and (max-width:2000px){
+    .student-container{
+        margin-top:5%;
+    }
+    .profile-page{
+        overflow-y:hidden;
+    }
+}
+
+@media(min-width:750px) and (max-width:1100px){
+    .btn.change-button{
+        width:30%;
+    }
+    .form-horizontal>.form-group.myGroup{
+        margin-left:38%;
+    }
+    .student-profile-name {
+    font-size: 18px;
+    }
+    .students-list {
+      width: 100%;
+    }
+    .profile-header {
+        margin-top:3.5%;
+       
+        gap:40px;
+    }
+    .profile-image-container {
+        width: 30%;
+        height: 40%;
+    }
+   
+}
+
+@media(min-width:750px) and (max-width:850px){
+    .profile-image-container {
+        width: 30%;
+        height: 60%;
+    }
+    .username {
+    font-size: 20px;
+   }
+   .department {
+    font-size: 14px;  
+   }
+}
+
+
+@media(min-width:100px) and (max-width:767px){
+   .table-one.col-md-6{
+       padding:0%;
+       overflow-x:hidden;
+      
+    }
+    .table-two.col-md-6{
+       padding:0%;
+       overflow-x:hidden;
+    }
+  
+    .students-list {
+     width:45%;
+     height:10%;
+     font-size:15px;
+     margin:4% 5% 0% 0%;
+     display:inline-block;
+     
+   } 
+   .table-responsive.col-md-6{
+       margin-left:15%;
+   }
+   .form-group>label{
+       margin:1.8% 0% 0% 3%;
+   }
+  
+   
+}
+@media(min-width:450px) and (max-width:767px){
+   .form-horizontal>.form-group.myGroup{
+       margin-left:30%;
+   }
+   .form-group>.input-fields>select{
+       width:65%;
+    }
+   
+    .btn.change-button{
+        width:30%;
+    }
+    hr.horizontal{
+        margin-top:2px;
+    }
+    .students-list{
+        margin-bottom:20px;
+        width:28%;
+    }
+     .student-profile-name {
+      margin:-20% 0% 0% 29%;
+      padding:3%;
+    }
+}
+
+@media(min-width:450px) and (max-width:600px){
+    .student-container{
+        margin-top:10%;
+    }
+    .student-profile-name {
+      margin:-20% 0% 0% 25%;
+       padding:4%;
+    }
+      .students-list{
+        width:40%;
+    }
+}
+@media(min-width:100px) and (max-width:449px){
+  
+   .table-responsive.table-one>.table>tbody>tr>td{
+       white-space:normal;
+   }
+   
+   .students-list {
+     width:45%;
+     margin:0% 3% 5% 0%;
+     display:inline-block;
+     
+   }  
+   .student-profile-name {
+      font-size: 16px;
+     
+    }
+    .student-profile-image {
+    height: 24px;
+    width: 24px;
+    margin:5% 0% 0% 1%;
+    }
+    .student-container {
+        margin-top:10%;
+    }
+    hr.horizontal{
+        margin-top:-5px;
+    }
+    .form-horizontal>.form-group.myGroup{
+        margin-left:20%;
+    }
+    .btn.change-button{
+        width:30%;
+    }
+     .form-group>.input-fields>select{
+       width:68%;
+    }
+     .student-profile-name {
+      margin:-18% 0% 0% 25%;
+       padding:4%;
+    }
+      .students-list{
+        width:40%;
+    }
+  
+}
+
+@media(min-width:100px) and (max-width:299px){
+    .student-container {
+        margin-top:25%;
+    }
+    .students-list{
+        width:70%;
+        margin-bottom:10%;
+    }
+    .student-profile-name {
+      margin:-24% 0% 0% 25%;
+    }
+    .btn.change-button{
+        margin-top:5%;
+        width:60%;
+    }
+    
+}
+
+.download-button {
+    margin-top:-200px;
+    margin-left: 45%;
+    margin-bottom: 30px;
+    width: 150px;
+    color: white;
+    background-color: rgb(0, 183, 255);
+}
+
+.table-container {
+    overflow-y: hidden;
+}
+
+.student-index {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.header {
+    margin-top: 20%;
+}
+
+.row>h4 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.row>h3 {
+    text-align: center;
+    font-size: 15px;
+}
+
+.index-column-input {
+    font-size: 18px;
+    font-weight: 900;
+    padding: 1% 0% 0% 10%;
+    width: 300px;
+}
+
+.student-refrences {
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.refrence-details {
+    padding: 1%;
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+}
+
+.input-details {
+    width: 500px;
+    text-align:center;
+}
+
+.colon {
+    width: 40px;
+    padding: 1% 0% 0% 2%;
+}
+
+table {
+    margin-bottom: 4%;
+    justify-content: center;
+}
+
+.evaluation-details {
+    padding: 0% 0% 0% 1%;
+    font-size: 18px;
+    text-align: center;
+}
+
+table {
+    width: 89%;
+}
+
+.myModal1>.row {
+    border-radius:5px 5px 0px 0px;
+}
+
+.table-details {
+    width: 25px;
+    font-size: 15px;
+    text-align: center;
+}
+.icon{
+    margin-left:10%;
+}
+
+@media (min-width:768px) and (max-width:2000px) {
+    .navbar {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .logo-container {
+        display: none;
+    }
+    .togs {
+        margin-top: -6%;
+    }
+    .nav.navItems>li>a {
+        width: 50%;
+    }
+    button.navbar-toggle.tg {
+        margin-left: -5%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .togs {
+        margin-top: -7%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .togs {
+        margin-top: -7%;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .togs {
+        margin-top: -8.5%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .togs {
+        margin-top: -9%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .togs {
+        margin-top: -10%;
+    }
+    button.navbar-toggle.tg {
+        margin-top: 4%;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .togs {
+        margin-top: -15%;
+    }
+    button.navbar-toggle.tg {
+        margin-top: 4%;
+    }
+}
+
+@media(min-width:1200px) and (max-width:2000px) {
+    .header {
+        margin-top: 5%;
+    }
+    .student-index {
+        font-size: 20px;
+    }
+    table {
+        margin-left: 7%;
+    }
+    .table-details {
+        width: 120px;
+        padding: 1%;
+    }
+    .row>h4 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .row>h3 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .myModal1>.row {
+        width: 80%;
+    }
+    .icon>ul>li {
+        margin-top: -5px;
+    }
+    #tableContainer {
+        font-size: 18px;
+    }
+}
+
+@media(min-width:1200px) and (max-width:1250px) {
+    .myModal1>.row {
+        width: 80%;
+    }
+}
+
+@media(min-width:801px) and (max-width:1199px) {
+    #tableContainer {
+        font-size: 12px;
+    }
+    table {
+        margin-left: 6%;
+    }
+    .header {
+        margin-top: 35px;
+    }
+    .student-refrences {
+        margin-right: 10%;
+    }
+    .row>h4 {
+        font-weight: 700;
+    }
+    .row>h3 {
+        font-weight: 700;
+    }
+    .table-details {
+        padding: 1%;
+    }
+    .myModal1>.row {
+        width: 80%;
+    }
+    .icon>ul>li {
+        margin-top: -5px;
+    }
+}
+
+@media(min-width:700px) and (max-width:800px) {
+    table {
+        margin-left: 2%;
+    }
+    .table-details {
+        width: 16px;
+        padding: 1%;
+    }
+    .myModal1>.row {
+        width: 80%;
+    }
+    .header {
+        margin-top: 33px;
+    }
+    .row>h4 {
+        font-weight: 700;
+    }
+    .row>h3 {
+        font-weight: 700;
+    }
+    .icon>ul>li {
+        margin-top: -6px;
+    }
+    #tableContainer {
+        font-size: 10px;
+    }
+}
+
+@media(min-width:700px) and (max-width:767px) {
+    .icon>ul>li {
+        margin-top: -35px;
+    }
+    .header {
+        margin-top: 32px;
+    }
+}
+
+@media(min-width:100px) and (max-width:699px) {
+    #tableContainer {
+        font-size: 10px;
+    }
+    .table-details {
+        width: 30px;
+        font-size: 5px;
+    }
+    .myModal1>.row {
+        width: 79%;
+    }
+    .header {
+        font-size: 9px;
+        text-align: center;
+        margin-top: 33px;
+    }
+    .row>h4 {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .row>h3 {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .icon>ul>li {
+        margin-top: -35px;
+    }
+}
+
+@media(min-width:500px) and (max-width:599px) {
+    #tableContainer {
+        font-size: 9px;
+    }
+    .row>h4 {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .row>h3 {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .myModal1>.row {
+        width: 80%;
+    }
+    .header {
+        margin-top: 35px;
+    }
+}
+
+@media(width:600px) {
+    .myModal1>.row {
+        width: 80%;
+    }
+}
+
+@media(min-width:100px) and (max-width:450px) {
+    .myModal1>.row>div>h4 {
+        font-size: 15px;
+    }
+    .row>h4 {
+        font-size: 11px;
+    }
+    .row>h3 {
+        font-size: 10px;
+    }
+    .myModal1>.row {
+        width: 80%;
+    }
+    #tableContainer {
+        font-size: 7px;
+    }
+}

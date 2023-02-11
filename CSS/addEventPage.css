@@ -1,0 +1,694 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    font-size: 17px;
+}
+
+.navbar-dark {
+    background-color: rgb(0, 183, 255);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-nav>li>a {
+    color: white;
+}
+
+.nav.navItems>li>a:hover,
+.nav.navbar-right>li>a:hover {
+    background-color: transparent;
+    color: black;
+}
+
+nav.circle ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+nav.circle ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+nav.circle ul li a:hover:after {
+    -webkit-animation: circle 1.5s ease-in forwards;
+}
+
+@-webkit-keyframes circle {
+    0% {
+        width: 1px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        z-index: -1;
+        background: white;
+        border-radius: 100%;
+    }
+    100% {
+        background: white;
+        height: 5000%;
+        width: 5000%;
+        z-index: -1;
+        top: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 0;
+    }
+}
+
+.logo-container {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.logo-container>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+#myDropdown{
+	margin-top:1rem;
+	margin-left:-15rem;
+}
+
+.profile-container {
+    position: relative;
+    padding-top: 7px;
+    margin-top:-10px;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    float: right;
+    cursor:pointer;
+}
+
+.dropbtn {
+    background-color: rgb(0, 183, 255);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: rgb(0, 183, 255);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 260px;
+    margin-left:-78px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size:15px;
+    color: grey;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    color:black;
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+.show {
+    display: block;
+}
+
+.profile {
+    padding-top:10px;
+    padding-bottom:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border-bottom:1px solid lightgray;
+    margin-bottom:10px;
+}
+
+#profile-name {
+    font-size:13px;
+    background-color:white;
+    color:black;
+}
+
+#profile-name:hover {
+    background-color:white;
+    color:black;
+}
+
+.image-container {
+    height:150px;
+    width:150px;
+    border-radius:50%;
+}
+
+.image-container>img {
+    height:100%;
+    width:100%;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: transparent
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+.event-page {
+    margin-top: 4%;
+    width:100%;
+    height: 88vh;
+}
+
+.event-list-container {
+    height:104%;
+    width:100%;
+}
+
+.event-list {
+    height:100%;
+    width:100%;
+    overflow:scroll;
+    padding:30px;
+    z-index:1;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    align-items:center;
+    gap:5%;
+}
+
+main{
+    position:relative;
+    z-index:0;
+}
+.add-button-container {
+   margin-top:37%;
+   margin-left:95%;
+   position:fixed;
+   z-index:100;
+}
+
+.add-button {
+    height:50px;
+    width:50px;
+    font-size:30px;
+    border-radius:50%;
+    border:none;
+    color:white;
+    background-color:rgb(0,183,255);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.myModal-navbar {
+    padding-top: 7px;
+    padding-left: 15px;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(0, 183, 255);
+    border-radius:5px 5px 0px 0px;
+    font-size: 23px;
+    color: white;
+}
+
+.close-container {
+    margin-left: 68%;
+    cursor: pointer;
+}
+
+.confirm-detail-container {
+    margin-top:2%;
+    margin-left:3%;
+    font-size:20px;
+}
+
+.button-container1 {
+    margin-top:7%;
+    margin-left:65%;
+    width:35%;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.yes-button {
+    color:white;
+    background-color:rgb(0,183,255);
+}
+
+.myModal {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    right: 5%;
+    background-color: white;
+    z-index: 103;
+    height: auto;
+    width: 40%;
+    box-shadow: 0 0 10px black;
+    border: none;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+.black-overlay1 {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 104%;
+    background-color: black;
+    z-index: 101;
+    -moz-opacity: 0.4;
+    opacity: .40;
+    filter: alpha(opacity=20);
+    background-attachment: fixed;
+}
+
+.myModal1>.row,
+.myModal2>.row {
+    z-index:1000;
+    position: fixed;
+    width: 60%;
+}
+
+.myModal1>.row,
+.myModal2>.row {
+    background-color: rgb(0, 183, 255);
+    color: white;
+    margin: 0%;
+    border-radius:5px 5px 0 0;
+    margin-bottom: 10px;
+}
+
+.icon>ul>li {
+    list-style: none;
+    float: right;
+    margin-top:-2px;
+    margin-left:20%;
+}
+
+.icon>ul>li>i {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.myModal1,
+.myModal2 {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    right: 5%;
+    background-color: white;
+    z-index: 102;
+    overflow:scroll;
+    overflow-x: hidden;
+    height: 85%;
+    width: 60%;
+    box-shadow: 0 0 10px black;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-container,
+.form-container1 {
+    margin-top:10%;
+    margin-left:25%;
+}
+
+.form-group {
+    position: relative;
+    margin: 10px 2.5px 20px 2.5px;
+}
+
+input {
+    display: inline-block;
+    border: thin solid #fafafa;
+    color: #444;
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 10px 10px 10px 10px;
+}
+
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):active,
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):focus,
+textarea:hover,
+textarea:focus,
+select:hover,
+select:focus,
+input:hover,
+input:focus{
+    border: 1px solid rgb(0,183,255);
+    outline: none;
+    cursor:pointer;
+}
+
+label {
+    color: #999;
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 6px;
+    transition: 0.2s;
+}
+
+input:focus~label,
+input~label,
+input:hover~label,
+input:valid~label,
+select~label,
+select:focus~label,
+select:hover~label,
+select:valid~label,
+textarea~label,
+textarea:focus~label,
+textarea:hover~label,
+textarea:valid~label {
+    top: -10px;
+    left: 35px;
+    font-weight:light;
+    font-size: small;
+    color: rgb(0,183,255);
+    background-color: #fff;
+    padding: 0 5px 0 5px;
+}
+
+#eventImage {
+    height:50px;
+    padding:5%;
+}
+
+#search {
+    margin-left:5%;
+    margin-top:5%;
+    width:90%;
+    border-radius:25px;
+}
+
+.submit-button-container {
+    margin-left:15%;
+    margin-bottom:10%;
+    display:flex;
+    align-items:center;
+    gap:10%;
+}
+
+.upload-button {
+    background-color:rgb(0,183,255);
+    color:white;
+}
+
+.btn.upload-button:hover {
+    color:white;
+}
+
+.btn.upload-button:focus {
+    color:white;
+    border:none;
+}
+
+.btn.reset-button:focus {
+    border:none;
+}
+
+.no-record {
+    margin-left:40%;
+    color:gray;
+    font-size:40px;
+    font-weight:lighter;
+}
+
+.card-container {
+    width: 20%;
+}
+
+.card-container:hover {
+    cursor: pointer;
+}
+
+.frontside,
+.backside {
+    width: 100%;
+    height: 250px;
+}
+
+.frontside .card,
+.backside .card {
+    padding:3%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-container:hover .backside,
+.card-container.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.card-container:hover .frontside,
+.card-container.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card-container {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.event-image-container {
+    width: 100%;
+    height: 120px;
+    border-radius:5px;
+}
+
+.event-image-container > img {
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.card-body h4 {
+    color: rgb(0, 183, 255);
+}
+
+.card-body h5 {
+    color: green;
+}
+
+.card-body h6 {
+    color: rgb(36, 80, 160);
+}
+
+.circular-header {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+    width: 100%;
+    height: 180px;
+    background-color:rgb(146, 224, 255);
+    box-shadow:0 8px 6px -6px gray;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    padding: 3px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+.backside .card {
+    padding: 3%;
+}
+
+.button-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.button-container button {
+    border: none;
+    padding: 2% 5%;
+    border-radius: 5px;
+}
+
+.card-body>a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-body>a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.card-body>a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+.deletebtn {
+    background-color: red;
+    color: white;
+}
+
+.editbtn {
+    background-color: rgb(0, 183, 255);
+    color: white;
+}
+
+.time {
+    color:rgb(0,183,255);
+}
+
+.expire {
+    color:red;
+}

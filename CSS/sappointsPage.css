@@ -1,0 +1,1360 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    flex-wrap: wrap;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+.navbar {
+    font-size: 17px;
+}
+
+.navbar-dark {
+    background-color: rgb(0, 183, 255);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-nav>li>a {
+    color: white;
+}
+
+
+.nav.navItems>li>a:hover,
+.nav.navbar-right>li>a:hover {
+    background-color: transparent;
+    color: black;
+}
+
+nav.circle ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+nav.circle ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+nav.circle ul li a:hover:after {
+    -webkit-animation: circle 1.5s ease-in forwards;
+}
+
+@-webkit-keyframes circle {
+    0% {
+        width: 1px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        z-index: -1;
+        background: white;
+        border-radius: 100%;
+    }
+    100% {
+        background: white;
+        height: 5000%;
+        width: 5000%;
+        z-index: -1;
+        top: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 0;
+    }
+}
+
+.logo-container {
+    margin-top: -10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.logo-container>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar-nav li a {
+    color: white;
+}
+
+.navbar-nav li a:hover {
+    color: rgb(0, 183, 255);
+}
+
+.profile-container {
+    position: relative;
+    padding-top: 7px;
+    margin-top:-10px;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    float: right;
+    cursor:pointer;
+}
+
+.dropbtn {
+    background-color: rgb(0, 183, 255);
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: rgb(0, 183, 255);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 260px;
+    margin-left:-78px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size:15px;
+    color: grey;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    color:black;
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+#myDropdown{
+	margin-top:1rem;
+	margin-left:-15rem;
+}
+
+.show {
+    display: block;
+}
+
+.profile {
+    padding-top:10px;
+    padding-bottom:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border-bottom:1px solid lightgray;
+    margin-bottom:10px;
+}
+
+#profile-name {
+    font-size:13px;
+    background-color:white;
+    color:black;
+}
+
+#profile-name:hover {
+    background-color:white;
+    color:black;
+}
+
+.image-container {
+    height:150px;
+    width:150px;
+    border-radius:50%;
+}
+
+.image-container>img {
+    height:100%;
+    width:100%;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.sappoint-page {
+    display: flex;
+    z-index: 100;
+    min-height:100vh;
+}
+
+.black-overlay1 {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 101;
+    -moz-opacity: 0.2;
+    opacity: .20;
+    filter: alpha(opacity=20);
+    background-attachment: fixed;
+}
+
+.myModal1>.row {
+    background-color: rgb(0, 183, 255);
+    width:100%;
+    display:flex;
+    color: white;
+    margin: 0%;
+    z-index:1001;
+    margin-bottom: 10px;
+}
+
+.icon>ul>li {
+    list-style: none;
+    float: right;
+    margin-top: -10%;
+    margin-left:20%;
+}
+
+.icon>ul>li>i {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.myModal1 {
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    right: 5%;
+    background-color: white;
+    overflow-x: hidden;
+    height: 80%;
+    width: 80%;
+    box-shadow: 0 0 10px black;
+    border: none;
+    border-radius:5px 5px 0px 0px;
+    z-index:1001;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.myModal1>.row{
+	padding:1rem;
+}
+
+.table-container {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: transparent
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+
+.no-student {
+    color:grey;
+    font-weight:lighter;
+    font-size:20px;
+    margin-top:1%;
+    margin-left:40%;
+}
+
+.no-record-container {
+    margin-top:15%;
+    margin-left:40%;
+    width:20%;
+    height:30%;
+}
+
+.no-record-container > img {
+    height:100%;
+    width:100%;
+    object-fit:cover;
+}
+
+.sap-details-container {
+    height:100%;
+    position: relative;
+    z-index: 0;
+    width: 65%;
+    font-size: 15px;
+    border-right: 3px solid rgb(79, 76, 76);
+    min-height:100vh;
+}
+
+.sap-container {
+    overflow: scroll;
+    overflow-x: hidden;
+    height:80vh;
+    width: 100%;
+    margin-top: 2%;
+
+}
+
+.filter-container {
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    margin-top: 7rem;
+    margin-left:1rem;
+    height: 60px;
+    width: 95%;
+    border-radius: 0.625rem;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px rgb(195 195 195);
+}
+
+.file-container {
+    width:20%;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    justify-content: space-around;
+    
+    flex-wrap:wrap;
+
+}
+
+.dropdown-toggle {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.dropdown-menu {
+    width: 300px;
+}
+
+.dropdown-elements {
+    padding: 5px 20px;
+}
+
+.dropdown-elements:hover {
+    background-color: lightgray;
+    color: rgb(49, 169, 255);
+}
+
+.add-file {
+    font-size:20px;
+    color:black;
+}
+
+.add-file:hover,
+.icon:hover {
+    color:black;
+}
+
+.search-bar-container {
+    align-items: center;
+    display: flex;
+    margin-left: 2%;
+    margin-top:-8px;
+    border:none;
+    height: 60px;
+    width: 60%;
+}
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+}
+
+.input-fields>input {
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid lightgrey;
+}
+
+.input-fields>input::placeholder {
+    font-weight: light;
+    font-size: 15px;
+}
+
+#sapDocument {
+    height:50px;
+    padding-top:4%;
+}
+
+.card-blocks {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    gap: 20px;
+    height: auto;
+    width: 90%;
+    box-shadow: 2px 2px 8px rgb(195, 195, 195);
+    border: none;
+    border-radius: 5px;
+    margin: 15px auto;
+}
+
+.points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(0, 183, 255);
+    font-size: 17px;
+}
+
+.prize {
+    color: rgb(255, 200, 3);
+}
+
+.state {
+    width:12%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+.accepted {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding:1rem 3rem;
+    border-radius:7px;
+    background-color:rgb(132, 255, 167);
+
+}
+
+.waiting {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding:1rem 3rem;
+    border-radius:7px;
+    background-color:rgb(255, 249, 132);
+}
+
+.rejected {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding:1rem 3rem;
+    border-radius:7px ;
+    background-color:rgb(255, 132, 132);
+}
+
+.document-detail-container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    margin-left:-16%;
+    height:50%;
+    width:100%;
+}
+
+.title-container {
+    padding:5px;
+    border-bottom:1px solid black;
+    width:125%;
+    margin-left:-14%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.desc-container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    word-break:break-out;
+    margin-top:3%;
+    margin-bottom:5%;
+    margin-left:-15%;
+    border:1px solid lightgray;
+    width:120%;
+    height:100px;
+    border-radius:5px;
+    box-shadow:0 1px 20px 0 rgba(0,0,0,0.2);
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+.document-submitted {
+    width: 50%;
+    word-break: break-word;
+}
+
+.view-button {
+    margin-left: 7%;
+    width: 100px;
+    color: white;
+    background-color: rgb(0, 183, 255);
+}
+
+.black-overlay {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 3;
+    -moz-opacity: 0.2;
+    opacity: .20;
+    filter: alpha(opacity=20);
+    background-attachment: fixed;
+}
+
+.myModal-navbar {
+    padding-top: 7px;
+    padding-left: 15px;
+    display: flex;
+    height: 50px;
+    z-index:1001;
+    width: 100%;
+    background-color: rgb(0, 183, 255);
+    border-radius:5px 5px 0px 0px;
+    font-size: 23px;
+    color: white;
+}
+
+.close-container {
+    margin-left: 70%;
+    cursor: pointer;
+}
+
+.mark-container {
+    margin-top:2%;
+    margin-left:25%;
+}
+
+.button-container1 {
+    margin-top: 10px;
+    margin-left: 65%;
+}
+
+.no-button {
+    margin-right:5%;
+}
+
+.yes-button {
+    background-color: rgb(0, 183, 255);
+}
+
+#cc {
+    font-size:25px;
+}
+
+.confirm-container {
+ margin-top:3%;
+ margin-left:10%;
+ display:none;
+}
+
+.confirm-detail-container {
+    margin-left: -20px;
+    font-size:20px;
+}
+
+.myModal {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    right: 5%;
+    background-color: white;
+    z-index: 4;
+    height: auto;
+    width: 70%;
+    box-shadow: 0 0 10px black;
+    border: none;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+.allocatedMark {
+    color:green;
+}
+
+.button-container {
+    margin-top: 10px;
+    margin-left: 15%;
+    width:100%;
+}
+
+#emark {
+   background-color:white;
+}
+
+#amark {
+    width: 30px;
+    border: none;
+}
+
+.description-container {
+    margin-left:-145px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.open-button {
+    margin-top: 20px;
+    margin-left: 2%;
+    width: 100px;
+    color: white;
+    background-color: rgb(0, 183, 255);
+}
+
+.edit-button {
+    margin-top: 20px;
+    margin-left: 2%;
+    width: 100px;
+    color: white;
+    background-color: blue;
+}
+
+.reject-button {
+    margin-top: 20px;
+    margin-left: 2%;
+    width: 100px;
+    color: white;
+    background-color: rgb(255, 11, 11);
+}
+
+.download-button {
+    margin-top:-200px;
+    margin-left: 45%;
+    margin-bottom: 30px;
+    width: 150px;
+    color: white;
+    background-color: rgb(0, 183, 255);
+}
+
+.conduction-detail-container {
+    position: absolute;
+    top: 90%;
+    background-color: rgb(0, 183, 255);
+    z-index: 2;
+    height: 60px;
+    width: 100%;
+    border: none;
+}
+
+.detail-close {
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin-left: 96%;
+    padding: 5px;
+}
+
+.detail-container {
+    margin-top: -10px;
+    margin-left: 15%;
+    display: flex;
+    align-items: center;
+    gap: 20%;
+}
+
+.online-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.color-online {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(255, 3, 192);
+    border-radius: 50%;
+}
+
+.color-offline {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(0, 254, 110);
+    border-radius: 50%;
+}
+
+.color-detail {
+    color: white;
+    font-size: 15px;
+}
+
+.black-overlay2 {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 101;
+    -moz-opacity: 0.4;
+    opacity: .40;
+    filter: alpha(opacity=20);
+    background-attachment: fixed;
+}
+
+
+.myModal2>.row,
+.myModal3>.row,
+.myModal4>.row {
+    background-color: rgb(0, 183, 255);
+    color: white;
+    margin: 0%;
+    padding:1rem;
+    border-radius:5px 5px 0 0;
+    margin-bottom: 10px;
+    z-index:1001;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+ .title{
+    width:50%;
+}
+.icon>ul>{
+    list-style: none;
+    float: right;
+    margin-top:-2px;
+    margin-left:20%;
+    
+}
+
+ul{
+	margin-bottom:0px;
+}
+
+.icon>ul>li>i {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.myModal2,
+.myModal3,
+.myModal4 {
+    display: none;
+    position: absolute;
+    top: 12%;
+    left: 2%;
+    right: 2%;
+    background-color: white;
+    z-index: 102;
+    overflow:scroll;
+    overflow-x: hidden;
+    height: 85%;
+    width: 60%;
+    box-shadow: 0 0 10px black;
+    border: none;
+    border-radius: 5px;
+}
+
+.document-container {
+    height:100%;
+    width:100%;
+    margin-top:5%;
+}
+
+.sap-document {
+    height:100%;
+    width:100%;
+}
+
+.form-container,
+.form-container1 {
+    margin-top:10%;
+    display: flex;
+    justify-content: center;}
+
+.form-horizontal{
+	width:100%;
+	margin-left:10rem;
+}
+.form-group {
+    position: relative;
+    margin: 10px 2.5px 20px 2.5px;
+}
+
+#search {
+    border-radius:8px;
+    width:100%;
+}
+
+input {
+    display: inline-block;
+    border: thin solid #fafafa;
+    color: #444;
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 10px 10px 10px 10px;
+    font-size:15px;
+}
+
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):active,
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):focus,
+textarea:hover,
+textarea:focus,
+select:hover,
+select:focus,
+input:hover,
+input:focus{
+    border: 1px solid rgb(0,183,255);
+    outline: none;
+    cursor:pointer;
+}
+
+label {
+    color: #999;
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 6px;
+    transition: 0.2s;
+}
+
+input:focus~label,
+input~label,
+input:hover~label,
+input:valid~label,
+select~label,
+select:focus~label,
+select:hover~label,
+select:valid~label,
+textarea~label,
+textarea:focus~label,
+textarea:hover~label,
+textarea:valid~label {
+    top: -10px;
+    left: 35px;
+    font-weight:light;
+    font-size: small;
+    color: rgb(0,183,255);
+    background-color: #fff;
+    padding: 0 5px 0 5px;
+}
+
+.submit-button-container {
+    margin-left:15%;
+    margin-bottom:10%;
+    display:flex;
+    align-items:center;
+    gap:10%;
+}
+
+.upload-button {
+    background-color:rgb(0,183,255);
+    color:white;
+}
+
+.btn.upload-button:hover {
+    color:white;
+}
+
+.btn.upload-button:focus {
+    color:white;
+    border:none;
+}
+
+.btn.reset-button:focus {
+    border:none;
+}
+
+.student-details-container {
+    margin-top: 5rem;
+    width: 35%;
+    min-height:100vh;
+}
+
+.progress-container {
+    width: 100%;
+    height: 40%;
+	
+}
+
+#progressBar {
+    width: 18rem;
+    height: 72%;
+    background-color: white;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:0px;
+    transform: rotate(-90deg) rotateX(180deg);
+
+}}
+
+.progress {
+    display: block;
+    margin: 0px;
+    margin-bootom:-20px;
+    overflow: hidden;
+    transform: rotate(-90deg) rotateX(180deg);
+}
+
+.progress circle {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s ease;
+    stroke: rgb(0, 183, 255);
+    stroke-width: 9px;
+}
+
+.progress .bar {
+    stroke: rgb(191, 237, 255);
+}
+
+.progressdiv {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.progressdiv:after {
+    position: absolute;
+    font-size: 35px;
+    content: attr(data-percent) " / 80";
+}
+
+.details-container {
+    width: 100%;
+}
+
+.student-details-content {
+	width:80%;
+}
+
+.points-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    color: black;
+    border-bottom: 1px solid lightgrey;
+}
+
+
+
+.student-profile-details {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 15px;
+    gap: 2rem;
+}
+
+.student-profile-container {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 15px;
+    gap: 2rem;}
+
+.line {
+    margin-bottom:15px;
+}
+
+.student-detail {
+    width: 100%;
+    color: grey;
+    padding-left: 5%;
+    margin-left: -0.5rem;
+}
+
+.detail-button {
+    width: 130px;
+    color: white;
+    background-color: rgb(0, 183, 255);
+}
+
+.table-container {
+    overflow-y: hidden;
+}
+
+.student-index {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.header {
+    margin-top: 20%;
+}
+
+.row>h4 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.row>h3 {
+    text-align: center;
+    font-size: 15px;
+}
+
+.index-column-input {
+    font-size: 18px;
+    font-weight: 900;
+    padding: 1% 0% 0% 10%;
+    width: 300px;
+}
+
+.student-refrences {
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.refrence-details {
+    padding: 1%;
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+}
+
+.input-details {
+    width: 500px;
+    text-align:center;
+}
+
+.colon {
+    width: 40px;
+    padding: 1% 0% 0% 2%;
+}
+
+table {
+    margin-bottom: 4%;
+    justify-content: center;
+}
+
+.evaluation-details {
+    padding: 0% 0% 0% 1%;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+.table-details {
+    width: 25px;
+    font-size: 15px;
+    text-align: center;
+}
+.icon{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items:center;
+}
+@media(min-width:1200px) and (max-width:2000px) {
+    .header {
+        margin-top: 5%;
+    }
+    .student-index {
+        font-size: 20px;
+    }
+    table {
+        margin-left: 7%;
+    }
+    .table-details {
+        width: 120px;
+        padding: 1%;
+    }
+    .row>h4 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .row>h3 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .myModal1>.row {
+        width: 100%;
+    }
+
+    #tableContainer {
+        font-size: 18px;
+    }
+}
+
+@media(min-width:1200px) and (max-width:1250px) {
+    .myModal1>.row {
+        width: 100%;
+    }
+}
+
+@media(min-width:801px) and (max-width:1199px) {
+    #tableContainer {
+        font-size: 12px;
+    }
+    .header {
+        margin-top: 35px;
+    }
+    .student-refrences {
+        margin-right: 10%;
+    }
+    .row>h4 {
+        font-weight: 700;
+    }
+    .row>h3 {
+        font-weight: 700;
+    }
+    .table-details {
+        padding: 1%;
+    }
+    .myModal1>.row {
+        width: 100%;
+    }
+}
+
+@media(min-width:700px) and (max-width:800px) {
+    table {
+        margin-left: 2%;
+    }
+    .table-details {
+        width: 16px;
+        padding: 1%;
+    }
+    .myModal1>.row {
+        width: 100%;
+    }
+    .header {
+        margin-top: 33px;
+    }
+    .row>h4 {
+        font-weight: 700;
+    }
+    .row>h3 {
+        font-weight: 700;
+    }
+    #tableContainer {
+        font-size: 10px;
+    }
+}
+
+@media(min-width:700px) and (max-width:767px) {
+    .header {
+        margin-top: 32px;
+    }
+}
+
+@media(min-width:100px) and (max-width:699px) {
+    #tableContainer {
+        font-size: 10px;
+    }
+    .table-details {
+        width: 30px;
+        font-size: 5px;
+    }
+    .myModal1>.row {
+        width: 100%;
+    }
+    .header {
+        font-size: 9px;
+        text-align: center;
+        margin-top: 33px;
+    }
+    .row>h4 {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .row>h3 {
+        font-size: 12px;
+        font-weight: 700;
+    }
+ }
+
+@media(min-width:500px) and (max-width:599px) {
+    #tableContainer {
+        font-size: 9px;
+    }
+    .row>h4 {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .row>h3 {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .myModal1>.row {
+        width: 100%;
+    }
+    .header {
+        margin-top: 35px;
+    }
+}
+
+@media(width:600px) {
+    .myModal1>.row {
+        width: 100%;
+    }
+}
+
+@media(min-width:100px) and (max-width:450px) {
+    .myModal1>.row>div>h4 {
+        font-size: 15px;
+    }
+    .row>h4 {
+        font-size: 11px;
+    }
+    .row>h3 {
+        font-size: 10px;
+    }
+    .myModal1>.row {
+        width: 100%;
+    }
+    #tableContainer {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width:750px){
+	.sappoint-page{
+	       flex-direction: column-reverse;
+	}
+        .sap-details-container{
+		width:100%;
+		border:none;
+		}
+	.student-details-container{
+                margin-top:8.5rem;
+   		width:100%;
+		display:flex;
+		flex-direction:row;
+		justify-content:space-evenly;
+		align-items:center;
+		min-height:5vh;
+	}
+	.progress-container{
+		width:40%;
+	}
+	.details-container{
+		width:60%;
+	}
+}
+
+@media screen and (max-width:650px)
+{
+	.myModal2{
+		width:85%;
+		margin-top:20%;
+		margin-left:5%;
+	}
+	.input-fields{
+		width:85%
+		margin-left: 5%;
+	}
+}
+
+
+@media screen and (max-width:450px){
+	.sappoint-page{
+	       flex-direction: column-reverse;
+	}
+        .sap-details-container{
+		width:100%;
+		}
+	.student-details-container{
+                margin-top:8.5rem;
+   		width:100%;
+		display:flex;
+		flex-direction:column;
+		justify-content:space-evenly;
+		align-items:center;
+		min-height:5vh;
+	}
+	.progress-container{
+		width:100%;
+	}
+	.details-container{
+		width:100%;
+	}
+	.file-container{
+		width:35%
+	}
+	.input-fields{
+		width:84%;
+	        margin-left: 5%;
+	}
+}
